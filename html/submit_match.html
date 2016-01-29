@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+  <head>
+      <title>Match Stats Report</title>
+	  <style>
+	body  {
+		background-image: url("http://1skillz-networksunited.net/wp-content/uploads/2012/10/NBA-Map-2012.png")
+	} 
+	  </style>
+	  <!-- Latest compiled and minified CSS -->
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">   
+	  <!-- Optional theme -->
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	  <!-- Latest compiled and minified JavaScript -->
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	  </head>
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+				<h4 align="center">
+					Add a new match data
+					<br>
+					<br>
+				</h4>
+					<form action="/cgi-bin/lingduokong/final/submit_match.pl" method="get">
+						<fieldset class="form-group">
+							<div class="col-xs-2">
+							</div>
+							<div class="col-xs-4">
+								<input type="text" class="form-control" placeholder="Year 4digit number" name="Year">
+								<br>
+								<input type="text" class="form-control" placeholder="Month 2digit number" name="Month">
+								<br>
+								<input type="text" class="form-control" placeholder="Day 2digit number" name="Day">
+								<br>
+								<input type="text" class="form-control" placeholder="Home 3 letter Name " name="HomeName">
+								<br>
+								<input type="text" class="form-control" placeholder="Away 3 letter Name" name="AwayName">
+							</div>
+							<div class="col-xs-4">
+								<input type="text" class="form-control" placeholder="plusMinusHome" name="plusMinusHome">
+								<br>
+								<input type="text" class="form-control" placeholder="plusMinusAway" name="plusMinusAway">
+								<br>
+								<input type="text" class="form-control" placeholder="offensiveReboundsHome" name="offensiveReboundsHome">
+								<br>
+								<input type="text" class="form-control" placeholder="offensiveReboundsAway" name="offensiveReboundsAway">
+								<br>
+								<input type="text" class="form-control" placeholder="defensiveReboundsHome" name="defensiveReboundsHome">
+								<br>
+								<input type="text" class="form-control" placeholder="defensiveReboundsAway" name="defensiveReboundsAway">
+							</div>
+						</fieldset>
+						<div style="text-align:center">
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

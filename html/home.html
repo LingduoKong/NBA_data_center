@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+  <head>
+    <title>NBA Stats Report</title>
+<style>
+body  {
+background-image: url("http://1skillz-networksunited.net/wp-content/uploads/2012/10/NBA-Map-2012.png")
+}
+</style>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+ integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+ integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
+integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
+$(function() {
+    var teamNames = [
+        "ATL",
+        "BKN",
+        "BOS",
+        "CHA",
+        "CHI",
+        "CLE",
+        "DAL",
+        "DEN",
+        "DET",
+        "GS",
+        "HOU",
+        "IND",
+        "LAC",
+        "LAL",
+        "MEM",
+        "MIA",
+        "MIL",
+        "MIN",
+        "NOP",
+        "NYK",
+        "OKC",
+        "ORL",
+        "PHI",
+        "PHX",
+        "POR",
+        "SAC",
+        "SA",
+        "TOR",
+        "UTA",
+        "WAS"
+    ];
+    $( "#team_name_home" ).autocomplete({
+      source: teamNames
+    }); 
+    $( "#team_name_away" ).autocomplete({
+	source: teamNames
+	});
+  });   
+</script>
+</head>
+<body>
+<div class="container">
+<div class="jumbotron">
+<p align="center"> Please search players full name before searching stats </p>
+<div class="row">
+
+<div class="col-xs-2">
+</div>
+<div class="col-xs-4">
+  <form action="/cgi-bin/lingduokong/final/player_names.pl" method="get" target="results_iframe">
+    <fieldset class="form-group">
+      <label for="searchPlayerName">Search name</label>
+      <input type="text" class="form-control" id="searchPlayerName" placeholder="Enter keyword" name="player_name">
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <br>
+  <form action="/cgi-bin/lingduokong/final/player_stats.pl" method="get" target="results_iframe">
+    <fieldset class="form-group">
+      <label for="searchPlayerStats">Search Player Stats</label>
+      <input type="text" class="form-control" id="searchPlayerStats" placeholder="Enter player full name" name="player_name">
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<div class="col-xs-4">
+  <form action="/cgi-bin/lingduokong/final/matchup_stats.pl" method="get" target="results_iframe">
+    <fieldset class="form-group">
+      <label>Search Single Match stats</label>
+      <input type="text" class="form-control" placeholder="Year 4 digit number" name="Year">
+	  <br>
+      <input type="text" class="form-control" placeholder="Month 2 digit number" name="Month">
+	  <br>
+	  <input type="text" class="form-control" placeholder="Day 2 digit number" name="Day">
+	  <br>
+	  <input type="text" id="team_name_home" class="form-control" placeholder="Home team abbreviation" name="HomeName">
+	  <br>
+	  <input type="text" id="team_name_away"  class="form-control" placeholder="Away team abbreviation" name="AwayName">
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+
+</div>
+</div>
+<iframe frameBorder="0" name="results_iframe" style="display:block;height:50%;width:100%;margin-left:auto;margin-right:auto"/>
+</div>
+</body>
+
+</html>
+

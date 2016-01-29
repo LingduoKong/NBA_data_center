@@ -1,0 +1,51 @@
+namespace java edu.uchicago.mpcs53013.NBAstats
+
+struct Matchups {
+	1: required string gameID;
+	2: required string startTime;
+	3: required string endTime;
+	4: required string elapsedTime;
+	5: required double elapsedSecs;
+	6: required double homePlayer1ID;
+	7: required double homePlayer2ID;
+	8: required double homePlayer3ID;
+	9: required double homePlayer4ID;
+	10: required double homePlayer5ID;
+	11: required double awayPlayer1ID;
+	12: required double awayPlayer2ID;
+	13: required double awayPlayer3ID;
+	14: required double awayPlayer4ID;
+	15: required double awayPlayer5ID;
+	16: required string homePlayer1Name;
+	17: required string homePlayer2Name;
+	18: required string homePlayer3Name;
+	19: required string homePlayer4Name;
+	20: required string homePlayer5Name;
+	21: required string awayPlayer1Name;
+	22: required string awayPlayer2Name;
+	23: required string awayPlayer3Name;
+	24: required string awayPlayer4Name;
+	25: required string awayPlayer5Name;
+	26: required double startScoreHome;
+	27: required double startScoreAway;
+	28: required double endScoreHome;
+	29: required double endScoreAway;
+	30: required double pointsScoredHome;
+	31: required double pointsScoredAway;
+	32: required double plusMinusHome;
+	33: required double plusMinusAway;
+	34: required double possessionsHome;
+	35: required double possessionsAway;
+	36: required double offensiveRtgHome;
+	37: required double offensiveRtgAway;
+	38: required double overallRtgHomevsAway;
+	39: required double overallRtgAwayvsHome;
+	40: required double offensiveReboundsHome;
+	41: required double offensiveReboundsAway;
+	42: required double defensiveReboundsHome;
+	43: required double defensiveReboundsAway;
+	44: required double offensiveReboundingRateHome;
+	45: required double offensiveReboundingRateAway;
+	46: required double defensiveReboundingRateHome;
+	47: required double defensiveReboundingRateAway;
+}

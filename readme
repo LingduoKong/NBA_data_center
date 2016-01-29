@@ -1,0 +1,6 @@
+The script folder contains shell scripts for downloading and sorting data.
+It also contains several pig files for load data from hdfs and store into hbase.
+
+The java project insert_data insert serialized data into hdfs and NBA_topology project inserts real time data into hbase table.
+The folder final_perl contains all perl files which should place under the path: cgi-bin/lingduokong/final/
+The folder html contains all html files which are home page and a submit new data page. 
